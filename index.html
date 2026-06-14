@@ -134,10 +134,7 @@
   .contact-link:hover { transform: translateY(-2px); background: var(--pink); }
 
   /* WHATSAPP */
-  .wa-config { background: var(--cream); border-radius: 16px; padding: 1.5rem; margin-top: 1rem; border: 1.5px solid #f0d6df; display: none; max-width: 400px; margin-left: auto; margin-right: auto; }
-  .wa-config p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.8rem; }
-  .wa-config input { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid #f0d6df; border-radius: 10px; font-size: 0.95rem; font-family: 'DM Sans', sans-serif; margin-bottom: 0.8rem; background: white; }
-  .wa-config button { background: #25d366; color: white; border: none; border-radius: 50px; padding: 0.7rem 1.5rem; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; }
+
 
   /* TICKER */
   .ticker { background: var(--accent); color: white; padding: 0.55rem 0; overflow: hidden; white-space: nowrap; }
@@ -299,14 +296,10 @@
     <p>Follow along for new drops, custom orders, and behind-the-stitches peeks.</p>
     <div class="contact-links">
       <a class="contact-link" href="https://instagram.com/loopslove_forv" target="_blank">📸 @loopslove_forv</a>
-      <span class="contact-link" onclick="showWaConfig()">💬 WhatsApp us</span>
+      <a class="contact-link" href="https://wa.me/919930369899" target="_blank">💬 WhatsApp us</a>
       <a class="contact-link" href="mailto:loopswithlov3@gmail.com">✉️ loopswithlov3@gmail.com</a>
     </div>
-    <div class="wa-config" id="wa-config">
-      <p>Enter a WhatsApp number to chat:</p>
-      <input type="tel" id="wa-number" placeholder="+91 XXXXX XXXXX" />
-      <button onclick="openWhatsApp()">Open WhatsApp 💬</button>
-    </div>
+
   </div>
 
   <!-- TICKER (at bottom) -->
@@ -546,16 +539,7 @@ function sendCustomOrder() {
   window.location.href = `mailto:loopswithlov3@gmail.com?subject=${subject}&body=${body}`;
 }
 
-// ── WHATSAPP ──────────────────────────────────────────────────────────────────
-function showWaConfig() {
-  const cfg = document.getElementById('wa-config');
-  cfg.style.display = cfg.style.display==='block' ? 'none' : 'block';
-}
-function openWhatsApp() {
-  const num = document.getElementById('wa-number').value.replace(/\D/g,'');
-  if (!num) { alert('Please enter a WhatsApp number first.'); return; }
-  window.open('https://wa.me/'+num, '_blank');
-}
+
 </script>
 </body>
 </html>
